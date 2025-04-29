@@ -2,6 +2,8 @@
 
 A modern, component-based presentation deck system built with Next.js and shadcn UI components.
 
+![CleanShot 2025-04-29 at 11  34 01@2x](https://github.com/user-attachments/assets/6cd1169d-b9e8-4042-aa33-134f2a6e6fda)
+
 ## Overview
 
 shadcn/deck is a flexible presentation framework that allows you to create beautiful slide decks using React components. Perfect for:
