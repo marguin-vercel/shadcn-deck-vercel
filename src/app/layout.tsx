@@ -22,7 +22,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
 	title: 'shadcn/deck',
-	description: 'Next.js based presentation system with view transitions',
+	description:
+		'A modern, component-based presentation deck system built with Next.js and shadcn UI components',
 };
 
 export default function RootLayout({

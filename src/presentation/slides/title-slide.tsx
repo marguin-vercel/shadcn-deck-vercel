@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { Slide } from '~/components/presentation/core/slide';
 
 import { Heading } from '~/components/presentation/elements/typography/heading';
@@ -43,11 +44,14 @@ export function TitleSlide() {
 				</div>
 			</Heading>
 			<Text size="lg" align="center" animate>
-				Built with React, TypeScript, and Tailwind CSS
+				A modern, component-based presentation deck system built with Next.js
+				and shadcn UI components
 			</Text>
 			<div className="mt-8 flex justify-center">
-				<Button variant="default" size="lg">
-					Get Started
+				<Button variant="default" size="lg" asChild>
+					<Link href="https://github.com/consentio/shadcn-deck">
+						Get Started
+					</Link>
 				</Button>
 			</div>
 		</Slide>

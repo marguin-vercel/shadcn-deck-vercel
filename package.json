@@ -9,14 +9,7 @@
 		"url": "https://github.com/consentio/shadcn-deck.git"
 	},
 	"homepage": "https://github.com/consentio/shadcn-deck",
-	"keywords": [
-		"presentation",
-		"slides",
-		"deck",
-		"react",
-		"nextjs",
-		"shadcn"
-	],
+	"keywords": ["presentation", "slides", "deck", "react", "nextjs", "shadcn"],
 	"scripts": {
 		"dev": "next dev --turbopack",
 		"build": "next build",
