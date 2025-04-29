@@ -90,6 +90,10 @@ Example slide definition:
 
 You can create your own slide components by adding them to the `src/presentation/slides` directory and importing them in the router.
 
+## Author
+
+[Christopher Burns](https://x.com/burnedchris)
+
 ## License
 
 MIT
