@@ -9,6 +9,7 @@ export function QuoteSlide() {
 				source="Apple Worldwide Developers Conference, 1997"
 				size="lg"
 				align="center"
+				className="text-2xl"
 			>
 				Design is not just what it looks like and feels like. Design is how it
 				works.

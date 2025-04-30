@@ -14,6 +14,7 @@ const headingStyles = cva('mb-6 text-foreground tracking-tight', {
 			xl: 'font-bold text-4xl',
 			'2xl': 'font-bold text-5xl',
 			'3xl': 'font-bold text-6xl',
+			'4xl': 'font-extrabold text-6xl',
 		},
 		align: {
 			left: 'text-left',
@@ -41,7 +42,7 @@ const headingStyles = cva('mb-6 text-foreground tracking-tight', {
 export interface HeadingProps {
 	children: ReactNode;
 	className?: string;
-	size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl';
+	size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '3xl' | '4xl';
 	align?: 'left' | 'center' | 'right';
 	color?: string;
 	weight?: 'normal' | 'medium' | 'semibold' | 'bold';

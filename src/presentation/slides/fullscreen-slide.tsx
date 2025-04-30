@@ -12,23 +12,24 @@ export function FullscreenSlide() {
 			<Heading size="2xl" align="center">
 				Fullscreen Mode
 			</Heading>
-			<Text size="lg" align="center" className="mb-8">
+			<Text size="lg" align="center" className="mb-10 text-xl">
 				Click the fullscreen button or press F to enter fullscreen mode
 			</Text>
 
 			<div className="flex justify-center">
-				<Box border rounded="lg" padding="lg" className="text-center">
-					<div className="mb-4 flex justify-center">
+				<Box border rounded="lg" padding="lg" className="max-w-2xl text-center">
+					<div className="mb-6 flex justify-center">
 						{/* Placeholder button styling */}
 						<Button
 							variant="default"
 							aria-label="Fullscreen Toggle"
 							type="button"
+							size="lg"
 						>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
-								width="20"
-								height="20"
+								width="24"
+								height="24"
 								viewBox="0 0 24 24"
 								fill="none"
 								stroke="currentColor"
@@ -44,7 +45,7 @@ export function FullscreenSlide() {
 							</svg>
 						</Button>
 					</div>
-					<Text>
+					<Text className="text-lg">
 						Fullscreen mode provides an immersive presentation experience
 						without distractions
 					</Text>

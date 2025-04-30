@@ -3,7 +3,7 @@ import type { CSSProperties, ReactNode } from 'react';
 import { cn } from '~/lib/utils';
 
 // Define box variants using tailwind-variants
-const boxStyles = cva('bg-card text-foreground', {
+const boxStyles = cva('flex flex-col bg-card text-foreground flex-1', {
 	variants: {
 		padding: {
 			none: 'p-0',
@@ -31,9 +31,9 @@ const boxStyles = cva('bg-card text-foreground', {
 		},
 	},
 	defaultVariants: {
-		padding: 'md',
+		padding: 'lg',
 		border: false,
-		rounded: 'md',
+		rounded: 'lg',
 		shadow: 'none',
 		animate: false,
 	},

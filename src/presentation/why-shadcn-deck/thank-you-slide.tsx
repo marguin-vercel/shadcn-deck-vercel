@@ -5,7 +5,7 @@ import { Heading } from '~/components/presentation/elements/typography/heading';
 import { Text } from '~/components/presentation/elements/typography/text';
 import { Button } from '~/components/ui/button';
 
-export function TitleSlide() {
+export function ThankYouSlide() {
 	return (
 		<Slide contentPosition="center" variant="gradient">
 			<Heading size="3xl" align="center" animate>
@@ -15,7 +15,7 @@ export function TitleSlide() {
 						viewBox="0 0 256 256"
 						className="h-12 w-12"
 					>
-						<title>shadcn/deck</title>
+						<title>shadcn/deck logo</title>
 						<rect width="256" height="256" fill="none" />
 						<line
 							x1="208"
@@ -43,14 +43,19 @@ export function TitleSlide() {
 					shadcn/deck
 				</div>
 			</Heading>
-			<Text size="lg" align="center" animate>
-				A modern, component-based presentation deck system built with Next.js
-				and shadcn UI components
+			<Text
+				size="lg"
+				align="center"
+				animate
+				className="mx-auto max-w-3xl text-2xl"
+			>
+				This entire presentation was built using shadcn/deck - a modern
+				presentation system using shadcn/ui components
 			</Text>
-			<div className="mt-8 flex justify-center">
-				<Button variant="default" size="lg" asChild>
+			<div className="mt-10 flex justify-center space-x-4">
+				<Button variant="outline" size="xl" asChild>
 					<Link href="https://github.com/consentio/shadcn-deck">
-						Get Started
+						gh repo clone consentdotio/shadcn-deck
 					</Link>
 				</Button>
 			</div>

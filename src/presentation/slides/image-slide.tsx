@@ -8,11 +8,13 @@ import dataDrivenInsights from '~/public/data-driven-insights.png';
 export function ImageSlide() {
 	return (
 		<Slide contentPosition="top">
-			<Heading size="xl">Image Component</Heading>
-			<Text>Display images with various styling options</Text>
+			<Heading size="2xl">Image Component</Heading>
+			<Text className="mb-6 text-xl">
+				Display images with various styling options
+			</Text>
 
-			<div className="mt-8 flex justify-center">
-				<Box border rounded="lg" padding="sm" className="overflow-hidden">
+			<div className="mt-10 flex justify-center">
+				<Box border rounded="lg" padding="md" className="overflow-hidden">
 					<Image
 						src={dataDrivenInsights.src}
 						alt="Presentation Example"

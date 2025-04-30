@@ -6,14 +6,19 @@ import { Text } from '~/components/presentation/elements/typography/text';
 export function ComponentOverviewSlide() {
 	return (
 		<Slide contentPosition="top">
-			<Heading size="2xl" align="left">
+			<Heading size="xl" align="left">
 				Component Overview
 			</Heading>
-			<Text>
+			<Text className="text-xl">
 				Our presentation system includes everything you need to create beautiful
 				slides
 			</Text>
-			<List type="checked" spacing="relaxed" animateItems className="mt-8">
+			<List
+				type="checked"
+				spacing="relaxed"
+				animateItems
+				className="mt-10 text-lg"
+			>
 				<ListItem>Flexible slide layouts and positioning</ListItem>
 				<ListItem>Typography components with customizable styles</ListItem>
 				<ListItem>Media components for images and code blocks</ListItem>
