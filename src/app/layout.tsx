@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import type { ReactNode } from 'react';
+import { Analytics } from "@vercel/analytics/react"
 
 import { DeckContextAdapter } from './components/deck-context-adapter';
 import MainLayoutClient from './components/main-layout.client';
@@ -45,6 +46,7 @@ export default function RootLayout({
 						</DeckProvider>
 					</ViewTransitionsProvider>
 				</Providers>
+				<Analytics />
 			</body>
 		</html>
 	);
