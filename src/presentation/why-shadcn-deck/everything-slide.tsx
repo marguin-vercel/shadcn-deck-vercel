@@ -4,6 +4,7 @@ import {
 	LayoutGrid,
 	Lightbulb,
 	Maximize,
+	Monitor,
 	Moon,
 } from 'lucide-react';
 import type { LucideIcon } from 'lucide-react';
@@ -49,24 +50,24 @@ export function EverythingSlide() {
 					icon={ImageIcon}
 				/>
 				<FeatureBox
-					title="Grid Layouts"
+					title="Grid / flex Support"
 					text="Structure content responsively and visually."
 					icon={LayoutGrid}
 				/>
 				<FeatureBox
-					title="Fullscreen Mode"
-					text="Zero distractions. Maximum clarity."
+					title="React Server Components"
+					text="Use server components to render your slides."
 					icon={Maximize}
 				/>
 				<FeatureBox
-					title="Dark Mode + Responsive"
-					text="Adapts to theme and screen size with elegance."
+					title="Light/ Dark Mode"
+					text="Adapts to your environment."
 					icon={Moon}
 				/>
 				<FeatureBox
-					title="Built for the Web"
-					text="No installs. Just hit deploy and share."
-					icon={Lightbulb}
+					title="Responsive Design"
+					text="Adapts to screen size with elegance."
+					icon={Monitor}
 				/>
 			</Grid>
 		</Slide>

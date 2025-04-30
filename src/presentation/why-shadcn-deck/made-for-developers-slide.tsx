@@ -51,8 +51,8 @@ export function MadeForDevelopersSlide() {
 				/>
 				<FeatureBox
 					icon={Sparkles}
-					title="Interactive"
-					text="Add your components, demos, and live widgets directly into your slides."
+					title="Build and deploy your slides to the web"
+					text="No software to install, just load in the browser."
 				/>
 			</Grid>
 		</Slide>
