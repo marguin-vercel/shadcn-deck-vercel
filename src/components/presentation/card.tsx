@@ -3,7 +3,7 @@ import type { ReactNode } from 'react';
 import { cn } from '~/lib/utils';
 
 // Define card variants using cva
-const cardStyles = cva('overflow-hidden rounded-lg', {
+const cardStyles = cva('overflow-hidden', {
 	variants: {
 		variant: {
 			default: 'border border-border bg-background',
@@ -109,7 +109,7 @@ const contentStyles = cva('p-4', {
 	},
 });
 
-export interface CardProps {
+interface CardProps {
 	children: ReactNode;
 	className?: string;
 	variant?: 'default' | 'elevated' | 'flat';

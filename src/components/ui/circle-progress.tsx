@@ -11,7 +11,7 @@ import {
 } from 'react';
 import { cn } from '~/lib/utils';
 
-export interface CircleProgressProps extends HTMLAttributes<HTMLDivElement> {
+interface CircleProgressProps extends HTMLAttributes<HTMLDivElement> {
 	value: number;
 	maxValue: number;
 	size?: number;
@@ -175,6 +175,7 @@ const CircleProgress = ({
 		`${Math.round(value)}${props.suffix ? props.suffix : ''} out of ${maxValue}${props.suffix ? props.suffix : ''}, ${Math.round(fillPercentage * 100)}% complete`;
 
 	return (
+		// biome-ignore lint/a11y/useAriaPropsSupportedByRole: reccomended by shadcn
 		<div
 			className={cn('relative flex items-center justify-center', className)}
 			aria-valuenow={value}

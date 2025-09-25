@@ -95,7 +95,7 @@ const loadedLanguages = new Set([
 	'html',
 ]);
 
-export interface CodeProps {
+interface CodeProps {
 	children: string;
 	className?: string;
 	language?: string;

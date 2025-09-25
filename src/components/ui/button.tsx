@@ -1,7 +1,9 @@
+'use client';
+
 import { Slot } from '@radix-ui/react-slot';
 import { type VariantProps, cva } from 'class-variance-authority';
 
-import type { ComponentProps } from 'react';
+import type { ComponentProps, ElementType } from 'react';
 
 import { cn } from '~/lib/utils';
 
@@ -47,7 +49,7 @@ function Button({
 	VariantProps<typeof buttonVariants> & {
 		asChild?: boolean;
 	}) {
-	const Comp = asChild ? Slot : 'button';
+	const Comp = (asChild ? Slot : 'button') as ElementType;
 
 	return (
 		<Comp
@@ -58,4 +60,4 @@ function Button({
 	);
 }
 
-export { Button, buttonVariants };
+export { Button };

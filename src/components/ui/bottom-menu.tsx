@@ -74,6 +74,7 @@ export function MenuBar({
 						initial={{ opacity: 0, y: 5 }}
 						animate={{ opacity: 1, y: 0 }}
 						exit={{ opacity: 0, y: 5 }}
+						// @ts-expect-error - compatibility with motion/react
 						transition={springConfig}
 						className="-top-[31px] pointer-events-none absolute right-0 left-0 z-50"
 					>
@@ -87,6 +88,7 @@ export function MenuBar({
 							)}
 							initial={{ x: tooltipPosition.left }}
 							animate={{ x: tooltipPosition.left }}
+							// @ts-expect-error - compatibility with motion/react
 							transition={springConfig}
 							style={{ width: 'auto' }}
 						>
@@ -124,7 +126,7 @@ export function MenuBar({
 						<motion.button
 							key={index}
 							className={cn(
-								'relative flex h-10 w-10 items-center justify-center gap-2 rounded-full px-3 py-1',
+								'relative flex size-10 items-center justify-center gap-2 rounded-full px-3 py-1',
 								'transition-colors duration-150',
 								isActive ? 'bg-[#333333]' : 'hover:bg-[#333333]',
 								isPressed && 'scale-95',
@@ -144,7 +146,7 @@ export function MenuBar({
 							whileTap={{ scale: isDisabled ? 1 : 0.95 }}
 						>
 							<div className="flex items-center justify-center">
-								<div className="flex h-5 w-5 items-center justify-center overflow-hidden text-white">
+								<div className="flex size-5 items-center justify-center overflow-hidden text-white">
 									<item.icon className="h-full w-full" />
 								</div>
 							</div>

@@ -1,7 +1,8 @@
+/** biome-ignore-all lint/performance/noImgElement: todo: fix this */
 import NextImage from 'next/image';
 import { cn } from '~/lib/utils';
 
-export interface ImageProps {
+interface ImageProps {
 	src: string;
 	alt: string;
 	className?: string;
@@ -80,7 +81,6 @@ export function Image({
 		src.endsWith('.svg')
 	) {
 		return (
-			// biome-ignore lint/nursery/noImgElement: <explanation>
 			<img
 				src={src || '/placeholder.svg'}
 				alt={alt}
@@ -114,16 +114,22 @@ export function Image({
 				className
 			)}
 			style={{
-				width: typeof width === 'number' ? `${width}px` : width,
-				height: typeof height === 'number' ? `${height}px` : height,
+				width:
+					typeof width === 'number'
+						? `${width}px`
+						: width || (!width && !height ? '100%' : width),
+				height:
+					typeof height === 'number'
+						? `${height}px`
+						: height || (!width && !height ? '400px' : height),
 			}}
 		>
 			<NextImage
 				src={src}
 				alt={alt}
-				fill={!width || !height}
-				width={typeof width === 'number' ? width : undefined}
-				height={typeof height === 'number' ? height : undefined}
+				fill={!width && !height}
+				width={typeof width === 'number' ? width : width ? undefined : 600}
+				height={typeof height === 'number' ? height : height ? undefined : 400}
 				className={cn('max-w-full', fitClasses[fit], positionClasses[position])}
 				priority={priority}
 				sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
