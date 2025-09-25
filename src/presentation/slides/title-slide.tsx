@@ -19,11 +19,6 @@ function SlideComponent() {
 			<Text size="xl" align="center" className="mx-auto max-w-3xl">
 				We could reimagine presentations for the modern web?
 			</Text>
-			<div className="mt-10 flex justify-center">
-				<Button variant="outline" size="lg">
-					Let's Explore
-				</Button>
-			</div>
 		</Slide>
 	);
 }
