@@ -1,6 +1,8 @@
-# shadcn/deck
+# Vercel Deck (shadcn/deck with Vercel Design System)
 
-A modern, component-based presentation deck system built with Next.js and shadcn UI components.
+A modern, component-based presentation deck system built with Next.js, Vercel's design principles, and shadcn UI components.
+
+> **Credits**: This project is based on the excellent [shadcn-deck](https://github.com/consentdotio/shadcn-deck) by [consentio](https://github.com/consentdotio). This version adapts the original to use Vercel's design system, colors, and branding.
 
 ![CleanShot 2025-04-29 at 11  34 01@2x](https://github.com/user-attachments/assets/6cd1169d-b9e8-4042-aa33-134f2a6e6fda)
 

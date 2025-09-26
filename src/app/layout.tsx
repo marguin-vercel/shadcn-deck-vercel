@@ -16,9 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-	title: 'shadcn/deck',
-	description: 'A modern, component-based presentation deck system built with Next.js and shadcn UI components',
-
+	title: 'Vercel Deck',
+	description: 'A modern, component-based presentation deck system built with Next.js, Vercel design principles, and shadcn UI components',
 };
 
 export default function RootLayout({

@@ -1,0 +1,55 @@
+From 466cb6ac3aa976d0c1299d7d68ac472194e701d0 Mon Sep 17 00:00:00 2001
+From: Devin AI <158243242+devin-ai-integration[bot]@users.noreply.github.com>
+Date: Fri, 26 Sep 2025 12:57:36 +0000
+Subject: [PATCH] fix: eliminate slide transition flickering by preventing race
+ conditions
+
+- Add view transition detection in SlidePageWrapper useEffect
+- Prevent setSlug() calls during active view transitions
+- Use document.getAnimations().length > 0 to detect active transitions
+- Eliminates race condition between URL changes and store updates
+- Fixes flickering during rapid slide navigation
+
+Resolves slide transition flickering issue in shadcn-deck presentation app.
+
+Co-Authored-By: michael.arguin@vercel.com <michael.arguin@vercel.com>
+---
+ .../preview/components/slide-page-wrapper.tsx | 22 ++++++++++++++-----
+ 1 file changed, 17 insertions(+), 5 deletions(-)
+
+diff --git a/src/pkgs/deck/features/preview/components/slide-page-wrapper.tsx b/src/pkgs/deck/features/preview/components/slide-page-wrapper.tsx
+index 4f25bd4..e168d85 100644
+--- a/src/pkgs/deck/features/preview/components/slide-page-wrapper.tsx
++++ b/src/pkgs/deck/features/preview/components/slide-page-wrapper.tsx
+@@ -16,11 +16,23 @@ export function SlidePageWrapper({ slug }: { slug: string }) {
+ 	// Sync URL slug with store when services are ready and slug differs
+ 	useEffect(() => {
+ 		if (isServicesInitialized && currentSlug !== slug) {
+-			console.log('🔄 SlidePageWrapper: Syncing URL slug with store:', {
+-				urlSlug: slug,
+-				storeSlug: currentSlug,
+-			});
+-			setSlug(slug);
++			const isViewTransitionActive = 
++				typeof document !== 'undefined' && 
++				'startViewTransition' in document &&
++				document.getAnimations().length > 0;
++			
++			if (!isViewTransitionActive) {
++				console.log('🔄 SlidePageWrapper: Syncing URL slug with store:', {
++					urlSlug: slug,
++					storeSlug: currentSlug,
++				});
++				setSlug(slug);
++			} else {
++				console.log('⏸️ SlidePageWrapper: Skipping sync during view transition:', {
++					urlSlug: slug,
++					storeSlug: currentSlug,
++				});
++			}
+ 		}
+ 	}, [slug, currentSlug, isServicesInitialized, setSlug]);
+ 
+-- 
+2.34.1
+
